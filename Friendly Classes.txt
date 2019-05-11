@@ -1,0 +1,34 @@
+#include<iostream>
+
+using namespace std;
+
+
+
+class player {
+
+public:
+	int x;
+
+	void set(int n) {
+		y = n;
+	}
+	
+private:
+	int y;
+
+	friend int main();
+};
+
+
+int main() {
+
+	player b;
+	int z = 5;
+	b.set(z);
+
+	cout << b.y << endl;
+
+	
+	system("Pause");
+
+}

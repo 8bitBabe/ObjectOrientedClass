@@ -1,0 +1,17 @@
+#include<iostream>
+#include"header.h"
+#include<string>
+
+int main() {
+
+	dolphin d;
+	zebra z;
+
+	d.getValue();
+	d.infoDol();
+	z.getValue();
+	z.infoZeb();
+
+	system("Pause");
+
+}

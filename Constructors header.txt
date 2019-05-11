@@ -1,0 +1,24 @@
+#pragma once
+
+using namespace std;
+
+class player {
+public:
+	int x, y;
+
+	player() {
+		x = 0;
+		y = 0;
+	}
+
+	void printLoc() {
+		cout << x << " , " << y << endl;
+	}
+
+	~player() {
+	}
+
+private:
+	int z;
+
+};

@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+#include"header.h"
+
+void animal::getValue() {
+
+	cout << "Cual es el nombre? ";
+	cin >> name;
+
+	cout << "Cual es la edad de " << name << "? ";
+	cin >> age;
+
+	return;
+}
+
+void dolphin::infoDol() {
+
+	cout << "El delfin llamado " << name << " tiene " << age << " anios." << endl;
+
+}
+
+void zebra::infoZeb() {
+
+	cout << "La zebra llamada " << name << " tiene " << age << " anios." << endl;
+
+}

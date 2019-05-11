@@ -1,0 +1,105 @@
+#pragma once
+#include <iostream>
+
+using namespace std;
+
+class calendario {
+
+public:
+
+	calendario() {
+
+		mes = 0;
+		dia = 0;
+		year = 0;
+
+	}
+
+	void setDate() {
+
+		cout << "Cual es la fecha de hoy?" << endl;
+		cout << "Mes: ";
+		cin >> mes;
+		while ((mes > 0) && (mes < 13)) {
+			while ((mes == 1) || (mes == 3) || (mes == 5) || (mes == 7) || (mes == 8) || (mes == 10) || (mes == 12)) {
+
+				cout << "\nDia: ";
+				cin >> dia;
+
+				if ((dia < 32) && (dia > 0)) {
+
+							cout << "\nAnio: ";
+							cin >> year;
+
+							if (year > 0)
+								return;
+							else
+								cout << "Los anios se supone que tengan valores positivos. Favor intentar de nuevo." << endl;
+						
+				}
+				else {
+					cout << "Este mes solo tiene 31 dias. Favor de intentar de nuevo." << endl;
+				}
+			}
+
+			while ((mes == 4) || (mes == 6) || (mes == 9) || (mes == 11)) {
+
+				cout << "\nDia: ";
+				cin >> dia;
+
+				if ((dia < 31) && (dia > 0)) {
+
+						cout << "\nAnio: ";
+						cin >> year;
+
+						if (year > 0)
+							return;
+						else
+							cout << "Los anios se supone que tengan valores positivos. Favor intentar de nuevo." << endl;
+					}
+				else {
+					cout << "Este mes solo tiene 30 dias. Favor de intentar de nuevo." << endl;
+				}
+			}
+
+			while ((mes == 2)) {
+
+				cout << "\nDia: ";
+				cin >> dia;
+
+				if ((dia < 28) && (dia > 0)) {
+
+					cout << "\nAnio: ";
+					cin >> year;
+
+					if (year > 0)
+						return;
+					else
+						cout << "Los anios se supone que tengan valores positivos. Favor intentar de nuevo." << endl;
+				}
+				else {
+					cout << "Este mes solo tiene 28 dias. Favor de intentar de nuevo." << endl;
+				}
+			}
+			
+		}
+
+		cout << "Los meses se enumeran del 1 al 12. Favor de intentar de nuevo." << endl;
+		return;
+
+	}
+
+	void getDate() {
+		if (year > 0)
+			cout << "La fecha es " << dia << "/" << mes << "/" << year << endl;
+
+	}
+
+	~calendario() {}
+
+private:
+
+	int mes, dia, year;
+
+
+};
